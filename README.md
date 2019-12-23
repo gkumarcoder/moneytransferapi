@@ -1,15 +1,13 @@
 
 
-# mny_trsfer_srvc
+# moneytransferapi
 
 A service for money transfers between accounts
 
 ## Prerequisites
 
 - Java 8
-- Gradle 5.0
-- [Lombok](https://projectlombok.org/) IDE plugin   
-(So your IDE could resolve Lombok generated methods)
+- Gradle
 - Hibernate 5.0
 
 
