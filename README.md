@@ -18,11 +18,11 @@ Simple java RESTful API for performing money transfer between two internal accou
 ## Run
 
 ```
-./gradlew run
+.\gradlew run
 ```
 Generate sample data on application startup
 ```
-./gradlew run -PgenerateData
+.\gradlew run -PgenerateData
 ```
 The application starts on following host:port - [http://localhost:4567]
 
