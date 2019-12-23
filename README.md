@@ -72,7 +72,7 @@ feature: Clients / Accounts REST API
     
       | firstName     | lastName   |
       | Bala          | Kumar      |
-      | Ankit        | Jha      |
+      | Ankit         | Jha        |
       
     When client requests GET /clients/<pankajId>
     Then response status is 200
