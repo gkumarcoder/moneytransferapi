@@ -29,12 +29,12 @@ The application starts on following host:port - [http://localhost:4567]
 ## Endpoints
   
   
-| Method               | Type   | URL                              | Request Body | Response Body                |  
-| :---:                | :---:  | :---:                            | :---:        | :---:                        |
-| Get all Client       | GET    | /api/clients                     | ClentsModel  | Returns all existing clients |
-| Get specified Client | GET    | /api/clients/{id}                | -            | returns the specified client |
-| Account              | GET    | /api/clients/{clientId}/accounts | AccountModel | returns all accounts of the specified client |
-| Get specified account| GET    |/api/clients/{clientId}/accounts/{accountId}        | -                            | returns the specified account of the specified client                      |
+| Method               | Type  | URL                                         | Response Body                                         |  
+| :---:                | :---: | :---:                                       | :---:                                                 |
+| Get all Client       | GET   | /api/clients                                | Returns all existing clients                          |
+| Get specified Client | GET   | /api/clients/{id}                           | Returns the specified client                          |
+| Account              | GET   | /api/clients/{clientId}/accounts            | Returns all accounts of the specified client          |
+| Get specified account| GET   | /api/clients/{clientId}/accounts/{accountId}| Returns the specified account of the specified client |
 
 
 POST http://localhost:4567/api/transfer - performs money transfer between two internal accounts
