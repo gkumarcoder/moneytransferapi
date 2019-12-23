@@ -56,26 +56,26 @@ feature: Clients / Accounts REST API
     Given system contains following clients
     
       | firstName     | lastName   |
-      | Pankaj        | Kumar      |
-      | Gaurav        | Kumar      |
+      | Bala          | Kumar      |
+      | Ankit         | Jha        |
     When client requests GET /clients
     Then response status is 200
     And response contains 2 clients
     And response includes the following clients
     
       | order  | firstName     | lastName   |
-      | 0      | Pankaj        | Kumar      |
-      | 1      | Gaurav        | Kumar      |
+      | 0      | Bala          | Kumar      |
+      | 1      | Ankit         | Jha        |
 
   Scenario: Retrieving single client
     Given system contains following clients
     
       | firstName     | lastName   |
-      | Pankaj        | Kumar      |
-      | Gaurav        | Kumar      |
+      | Bala          | Kumar      |
+      | Ankit        | Jha      |
       
     When client requests GET /clients/<pankajId>
     Then response status is 200
     And response includes the following client
-      | firstName | Pankaj |
-      | lastName  | Jha    |
+      | firstName | Bala     |
+      | lastName  | Kumar    |
