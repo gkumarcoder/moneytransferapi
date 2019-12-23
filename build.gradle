@@ -1,0 +1,50 @@
+group 'com.revolut.moneytransferapi'
+    repositories {
+        mavenCentral()
+ 
+    }
+
+
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "eclipse"
+apply plugin: "maven"
+apply plugin: 'application'
+apply plugin: 'jacoco'
+mainClassName = 'com.revolut.moneytransferapi.App'
+sourceCompatibility = 1.8
+
+
+dependencies {
+
+   compile  'com.sparkjava:spark-core:2.5.5',
+            'com.google.code.gson:gson:2.8.2',
+            'com.google.inject:guice:4.2.0',
+            'com.google.inject.extensions:guice-persist:4.2.0',
+            'com.h2database:h2:1.4.197',
+            'org.hibernate:hibernate-core:5.2.16.Final',
+            'org.slf4j:slf4j-api:1.7.25',
+            'org.slf4j:slf4j-simple:1.7.25'
+    testCompile 'junit:junit:4.12',
+            'org.assertj:assertj-core:3.10.0',
+            'org.mockito:mockito-core:2.18.3',
+            'io.cucumber:cucumber-java:2.4.0',
+            'io.cucumber:cucumber-junit:2.4.0',
+            'io.rest-assured:rest-assured:3.0.6'
+
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+check.dependsOn jacocoTestReport
+
+run {
+    if (project.hasProperty("generateData")) {
+        args([true])
+    }
+}
